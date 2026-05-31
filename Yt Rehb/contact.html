@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос о курении — Без дыма</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1a2a3a;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #c0392b;
+        }
+        
+        .info-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-item h3 {
+            color: #1a2a3a;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .info-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #c0392b;
+        }
+        
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Без дыма | Вред курения</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="facts.html">Факты</a></li>
+                        <li><a href="why-popular.html">Почему популярно?</a></li>
+                        <li><a href="consequences.html">Последствия</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contact.html">Опрос</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="contact-header">
+                <h2>Анонимный опрос</h2>
+                <p>Помогите нам лучше понять отношение к курению</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Ваше мнение важно</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ваш возраст:</label>
+                            <input type="text" id="name" name="name" placeholder="Например: 25 лет" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="smoking-status">Статус курения:</label>
+                            <select id="smoking-status" name="smoking-status">
+                                <option value="never">Никогда не курил(а)</option>
+                                <option value="former">Бросил(а) курить</option>
+                                <option value="current">Курю сейчас</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Ваш комментарий или вопрос:</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Что вы думаете о вреде курения? Есть ли у вас вопросы?" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Отправить ответ</button>
+                        
+                        <div class="success-message" id="successMessage">
+                            Спасибо! Ваш ответ принят (демонстрационный режим).
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Почему важно говорить о вреде курения</h3>
+                    
+                    <div class="info-item">
+                        <h3><span class="info-icon">📢</span> Профилактика</h3>
+                        <p>Информирование о последствиях курения помогает предотвратить начало курения у подростков и молодёжи.</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h3><span class="info-icon">🆘</span> Помощь в отказе</h3>
+                        <p>Знание фактов и последствий мотивирует курящих людей бросить эту привычку.</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h3><span class="info-icon">🌿</span> Ресурсы</h3>
+                        <p>Если вы хотите бросить курить — обратитесь к врачу или на горячую линию помощи: 8-800-200-0-200 (бесплатно).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 6202 | Без дыма — информация о вреде курения</p>
+            <p>Сайт создан по приколу, по рофлу!</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && message) {
+                document.getElementById('successMessage').style.display = 'block';
+                this.reset();
+                setTimeout(function() {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+            } else {
+                alert('Пожалуйста, заполните все поля.');
+            }
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
